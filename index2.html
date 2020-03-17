@@ -1,0 +1,118 @@
+<!DOCTYPE html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="estilo.css">
+
+        
+
+        <title>Gera</title> 
+
+    </head>
+
+    <body>
+
+
+        <h3></h3>
+              <div id="clockdiv">
+                <div>
+                  <span class="days"></span>
+                  <div class="smalltext">Dias</div>
+                </div>
+                <div>
+                  <span class="hours"></span>
+                  <div class="smalltext">Horas</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="smalltext">Minutos</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="smalltext">Segundos</div>
+                </div>
+              </div>
+                
+            
+            </div>
+          </div>
+        
+            <script>
+                function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+          };
+        }
+        
+        function initializeClock(id, endtime) {
+          var clock = document.getElementById(id);
+          var daysSpan = clock.querySelector('.days');
+          var hoursSpan = clock.querySelector('.hours');
+          var minutesSpan = clock.querySelector('.minutes');
+          var secondsSpan = clock.querySelector('.seconds');
+        
+          function updateClock() {
+            var t = getTimeRemaining(endtime);
+        
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        
+            if (t.total <= 0) {
+              clearInterval(timeinterval);
+            }
+          }
+        
+          updateClock();
+          var timeinterval = setInterval(updateClock, 1000);
+        }
+        
+        var deadline = new Date(Date.parse(new Date()) + 5 * 24 * 60 * 60 * 1000);
+        initializeClock('clockdiv', deadline);
+        
+            </script>
+
+    <br><br>
+
+
+<div class="content">
+    <h2>Meet up!</h2>
+    <p><button id="add">Quero me cadastrar!</button></p>
+
+    <h1>PROGRAME-SE! <br>
+        19/02 <br>
+        quinta-feira <br>
+        às 20:00h</h1>
+
+        <ul>
+            <li><img src="img/GERA-03.png">Qual a diferença entre home office, home based e trabalho remoto?</li>
+            <li><img src="img/GERA-03.png">Como gerenciar a parte finaceira da minha empresa de forma remota?</li>
+            <li><img src="img/GERA-03.png">A empresa é obrigada a pagar os custos fixos do funcionário que faz home office?</li>
+          </ul>
+
+
+    <footer class="footer">
+        <img src="img/GERA-01.png"/> 
+    </footer>
+
+  </div>
+  
+
+</body>
+
+</html>

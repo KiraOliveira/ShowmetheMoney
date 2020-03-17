@@ -1,0 +1,121 @@
+html {
+    max-width: 100%;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Avoid the IE 10-11 `min-height` bug. */
+  }
+
+  .content {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    
+    background: #00B78C;
+  }
+
+  /*Meet Up!*/
+.content h2 {
+position: relative;
+width: 373px;
+height: 113px;
+left: 141px;
+top: 161px;
+}
+
+/*Programe-se!*/
+.content h1 {
+position: relative;
+width: 373px;
+height: 263px;
+left: 1365px;
+top: 348px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+/*Botão Quero me cadastrar!*/
+#add {
+position: relative;
+width: 487px;
+height: 88px;
+left: 1308px;
+top: 670px;
+
+background: #4F90F1;
+mix-blend-mode: normal;
+}
+
+ul {
+
+
+}
+
+li{
+
+}
+
+
+/*Cronometro*/
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #373737;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: rgb(72, 75, 74);
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+
+  .content {
+    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+  }
+  .footer {
+    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    /*padding: 20px;*/
+    position: absolute;
+    width: 1920px;
+    height: 140px;
+    left: 0px;
+    top: 940px;
+
+    background: #003F2F;
+  }
+
+  /*Imagem Rodapé*/
+.footer img {
+    position: relative;
+    width: 253px;
+    height: 128px;
+    left: 1667px;
+    top: 940px;
+    }
